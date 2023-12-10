@@ -1,0 +1,26 @@
+.productDetails {
+  padding: 1em 3em;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  .price {
+    font-size: 32px;
+    font-size: 2rem;
+  }
+  .messaging {
+    color: #990000;
+  }
+  .attributes {
+    color: #284f37;
+    margin-bottom: 2em;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  /*
+	min-width:1024px - iPad landscape - xlarge-grid;
+	*/
+  .productDetails {
+    margin-top: 0;
+    border-top: none;
+  }
+}

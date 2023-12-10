@@ -1,0 +1,18 @@
+.productCarousel {
+  margin-bottom: 0.5em;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  img {
+    max-height: 500px;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  /*
+	min-width:1024px - iPad landscape - xlarge-grid;
+	*/
+  .productCarousel {
+    margin-bottom: 0;
+  }
+}
