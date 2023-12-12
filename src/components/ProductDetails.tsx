@@ -2,190 +2,222 @@ import styles from "../assets/styles/ProductDetails.module.scss";
 
 interface ProductDetailsInterface {
   productData: {
-    productId: string;
-    type: string;
-    title: string;
-    code: string;
-    averageRating: number;
-    reviews: number;
-    image: string;
-    alternativeImageUrls: string[];
-    displaySpecialOffer: string;
+    media: {
+      videos: {
+        urls: string[];
+      };
+      images: {
+        urls: string[];
+      };
+    };
+    bundleProducts: string[];
     nonPromoMessage: string;
-    defaultSkuId: string;
-    defaultVariantId: string;
-    colorSwatches: [
-      {
-        color: string;
-        basicColor: string;
-        colorSwatchUrl: string;
-        isAvailable: boolean;
-        skuId: string;
-        id: string;
-        isColorOfDefaultVariant: boolean;
-      }
-    ];
-    outOfStock: boolean;
-    isAvailableToOrder: boolean;
-    compare: boolean;
-    fabric: string;
-    swatchAvailable: boolean;
-    brand: string;
-    ageRestriction: number;
-    isInStoreOnly: boolean;
-    isMadeToMeasure: boolean;
-    isBundle: boolean;
-    isProductSet: boolean;
-    dynamicAttributes: {
-      dimensions: string;
-      range: string;
-      modelnamenumber: string;
-      manufacturerpartnumbermpn: string;
-      augmentedrealityimageavailable: string;
-      colour: string;
-      truecolour: string;
-      integratedorfreestanding: string;
-      noiselevel: string;
-      rinseaidindicator: string;
-      noiselevelrating: string;
-      timeremainingindicator: string;
-      digitaldisplay: string;
-      installationrequired: string;
-      delicatewash: string;
-      programsequenceindicator: string;
-      childlock: string;
-      cablelength: string;
-      cycledurationatratedcapacityfortheecocycle: string;
-      cutlerybasket: string;
-      timerdelay: string;
-      brand: string;
-      weight: string;
-      floodprotection: string;
-      automaticloadadjustment: string;
-      dryingsystem: string;
-      smarttechnology: string;
-      quietmark: string;
-      saltlevelindicator: string;
-      amperage: string;
-      guarantee: string;
-      fittingsincluded: string;
-      energyratingoverall: string;
-      invertermotor: string;
-      quickwashcycletime: string;
-      countryoforigin: string;
-      widthbuiltinovens: string;
-      weightedwaterconsumptionfortheecocycle: string;
-      slimdepth: string;
-      smarthometype: string;
-      watersupplyfilltype: string;
-      placesettings: string;
-      dishwashersize: string;
-      quickwash: string;
-      noofprograms: string;
-      autodose: string;
-      homeappliancefeatures: string;
-      combinedaperturedimensions: string;
-      weightedenergyconsumptionper100cyclesforecocycle: string;
-      adjustable: string;
-      international: string;
-      homearea: string;
-      homeappliancetype: string;
-      annualrunningcost: string;
-      eligibleForTradeIn: string;
-      producttype1: string;
-    };
-    multiSku: boolean;
-    fabricByLength: boolean;
-    messaging: {
-      title: string;
-      type: string;
-      promotionGroup: string;
-      promotionType: string;
-    }[];
-    variantPriceRange: {
-      display: {
-        max: string;
-        min: string;
-      };
-      for: string;
-      reductionHistory: [];
-      value: {
-        max: string;
-        min: string;
-      };
-    };
-    services: [
-      {
-        __typename: string;
+    productId: string;
+    details: {
+      returns: string;
+      features: [
+        {
+          attributes: {
+            value: string;
+            name: string;
+            values: string[];
+            multivalued: boolean;
+          }[];
+          groupName: string;
+        }
+      ];
+      featuredArticles: {
         title: string;
-        automaticallyIncluded: boolean;
+        linkUrl: string;
+      }[];
+      buyingGuides: {
+        title: string;
+        linkUrl: string;
+      }[];
+      editorsNotes: string;
+      productInformation: string;
+    };
+    priceBands: string[];
+    type: string;
+    price: {
+      was: string;
+      then1: string;
+      uom: string;
+      currency: string;
+      then2: string;
+      now: string;
+    };
+    releaseDateTimestamp: number;
+    ageRestriction: number;
+    code: string;
+    specialOfferBundles: string[];
+    seoURL: string;
+    parentCategories: string[];
+    deliveries: [
+      {
+        options: {
+          isApprovedSupplier: boolean;
+          newStandardDescription: string;
+          price: string;
+          id: string;
+          shortDescription: string;
+          newShortDescription: string;
+          standardDescription: string;
+          newPriority: number;
+        }[];
+        deliveryType: string;
       }
     ];
-    attributes: {
-      key: string;
-      values: string[];
+    lifeCycleState: string;
+    averageRating: number;
+    skus: [
+      {
+        media: {
+          videos: {
+            urls: string[];
+          };
+          images: {
+            urls: string[];
+          };
+        };
+        dynamicAttributes: {
+          augmentedrealityimageavailable: string;
+          dimensions: string;
+          range: string;
+          modelnamenumber: string;
+          manufacturerpartnumbermpn: string;
+        };
+        size: string;
+        priceBand: string;
+        sizeHeadline: string;
+        unitPriceInfo: object;
+        price: {
+          then1: string;
+          now: string;
+          then2: string;
+          currency: string;
+          uom: string;
+          was: string;
+        };
+        id: string;
+        swatchUrl: string;
+        code: string;
+        color: string;
+        skuTitle: string;
+        brandName: string;
+        ticketType: string;
+        availability: {
+          message: string;
+          stockLevel: number;
+          isPreorder: boolean;
+          availabilityStatus: string;
+        };
+        isNotifiable: false;
+      }
+    ];
+    additionalServices: {
+      optionalServices: {
+        customProperties: {
+          warrantyCustomTooltip: string;
+          warrantyCustomConfirm: string;
+          warrantyCustomDescription: string;
+          warrantyCustomGeneric: string;
+        };
+        id: string;
+        title: string;
+        price: string;
+        associatedProductId: string;
+        orderOnSite: number;
+        type: string;
+        description: string;
+      }[];
+      includedServices: string[];
+    };
+    isFBL: boolean;
+    isAsafShape: boolean;
+    storeOnly: boolean;
+    numberOfReviews: number;
+    specialOffers: object;
+    displaySpecialOffer: string;
+    emailMeWhenAvailable: boolean;
+    promotionalFeatures: string[];
+    legs: string[];
+    crumbs: {
+      item: string;
+      clickable: string;
       displayName: string;
+      type: string;
     }[];
-    hiddenAttributes: {
-      key: string;
-      values: string[];
-      displayName: string;
-    }[];
-    permanentOos: boolean;
-    defaultParentCategory: {
+    defaultCategory: {
       id: string;
       name: string;
     };
-    customerNotifiableEvents: {
-      backInStock: boolean;
-      onRelease: boolean;
-      onPreorderLaunch: boolean;
-      newlyInStock: boolean;
+    title: string;
+    dynamicAttributes: {
+      dimensions: string;
+      delicatewash: string;
+      energyratingoverall: string;
+      floodprotection: string;
+      rinseaidindicator: string;
+      automaticloadadjustment: string;
+      widthbuiltinovens: string;
+      autodose: string;
+      programsequenceindicator: string;
+      brand: string;
+      dryingsystem: string;
+      watersupplyfilltype: string;
+      noiselevelrating: string;
+      saltlevelindicator: string;
+      cablelength: string;
+      slimdepth: string;
+      weight: string;
+      amperage: string;
+      digitaldisplay: string;
+      cycledurationatratedcapacityfortheecocycle: string;
+      timerdelay: string;
+      combinedaperturedimensions: string;
+      timeremainingindicator: string;
+      homeappliancefeatures: string[];
+      noofprograms: string;
+      noiselevel: string;
+      placesettings: string;
+      manufacturerpartnumbermpn: string;
+      dishwashersize: string;
+      integratedorfreestanding: string;
+      countryoforigin: string;
+      weightedenergyconsumptionper100cyclesforecocycle: string;
+      adjustable: string;
+      onlineexclusive: string;
+      childlock: string;
+      cutlerybasket: string;
+      weightedwaterconsumptionfortheecocycle: string;
+      quickwash: string;
+      smarttechnology: string[];
+      quickwashcycletime: string;
+      guarantee: string;
+      invertermotor: string;
+      installationrequired: string;
+      quietmark: string;
+      modelnamenumber: string;
+      range: string;
     };
-    energy: {
-      rating: {
-        value: string;
-      };
-      label: string;
+    defaultSku: string;
+    brand: {
+      logo: string;
+      name: string;
+      story: string;
     };
+    templateType: string;
   };
 }
 
 const ProductDetails = ({ productData }: ProductDetailsInterface) => {
   return (
     <section className={styles.productDetails}>
-      <div className={styles.price}>
-        {productData.variantPriceRange &&
-          productData.variantPriceRange.display.max}
-      </div>
-      {productData.messaging.length > 0 && (
-        <div className={styles.messaging}>
-          {productData.messaging.map(
-            (
-              item: {
-                title: string;
-                type: string;
-                promotionGroup: string;
-                promotionType: string;
-              },
-              index
-            ) => (
-              <div key={index}>{item.title}</div>
-            )
-          )}
-        </div>
-      )}
+      <div className={styles.price}>£{productData.price.now}</div>
+      <div className={styles.messaging}>{productData.displaySpecialOffer}</div>
       <div className={styles.attributes}>
-        {productData.attributes.map(
-          (
-            item: {
-              key: string;
-              values: string[];
-              displayName: string;
-            },
-            index
-          ) => item.key === "guarantee" && <div key={index}>{item.values}</div>
-        )}
+        {productData.dynamicAttributes.guarantee}
       </div>
     </section>
   );

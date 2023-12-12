@@ -1,14 +1,14 @@
 import styles from "../assets/styles/ProductCarousel.module.scss";
 
 interface ProductCarouselInterface {
-  image: string;
+  images: string[];
 }
 
-const ProductCarousel = ({ image }: ProductCarouselInterface) => {
+const ProductCarousel = ({ images }: ProductCarouselInterface) => {
   return (
     <div className={styles.productCarousel}>
       <figure>
-        <img src={image} alt="image of dishwasher in a slider" />
+        <img src={images[0]} alt="image of dishwasher in a slider" />
       </figure>
     </div>
   );

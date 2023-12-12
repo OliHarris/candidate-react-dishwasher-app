@@ -6,7 +6,7 @@ import styles from "../assets/styles/App.module.scss";
 
 const App = () => {
   return (
-    <div className="App row">
+    <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ProductGrid appStyles={styles} />} />

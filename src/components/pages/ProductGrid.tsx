@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import getDishwashersData from "../../api/getDishwashersData";
+import getDishwashersListData from "../../api/getDishwashersListData";
 import ProductListItem from "../ProductListItem";
 import styles from "../../assets/styles/pages/ProductGrid.module.scss";
 
@@ -15,7 +15,7 @@ const ProductGrid = ({ appStyles: appStyles }: ProductGridInterface) => {
   useEffect(() => {
     setProductsArray([]);
     setDataLoaded(false);
-    getDishwashersData(setDataLoaded).then((data) => {
+    getDishwashersListData(setDataLoaded).then((data) => {
       // these can then be set here
       setProductsArray(data.products);
     });
