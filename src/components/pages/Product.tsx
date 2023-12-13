@@ -245,7 +245,7 @@ const Product = ({ appStyles: appStyles }: ProductInterface) => {
         <Link
           className={appStyles.link}
           to={{
-            pathname: "/candidate-react-dishwasher-app/",
+            pathname: "/",
           }}
         >
           <span className={styles.linkBack}>{"\u2329"}</span>

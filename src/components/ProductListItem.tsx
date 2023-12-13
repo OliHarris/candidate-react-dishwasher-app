@@ -22,7 +22,7 @@ const ProductListItem = ({
       <Link
         className={appStyles.link}
         to={{
-          pathname: "/candidate-react-dishwasher-app/product",
+          pathname: "/product",
           search: `?id=${productId}`,
         }}
       >

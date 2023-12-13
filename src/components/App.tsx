@@ -10,14 +10,7 @@ const App = () => {
       <HashRouter>
         <Routes>
           <Route path="/" element={<ProductGrid appStyles={styles} />} />
-          <Route
-            path="/candidate-react-dishwasher-app"
-            element={<ProductGrid appStyles={styles} />}
-          />
-          <Route
-            path="/candidate-react-dishwasher-app/product"
-            element={<Product appStyles={styles} />}
-          />
+          <Route path="/product" element={<Product appStyles={styles} />} />
         </Routes>
       </HashRouter>
     </div>
