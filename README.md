@@ -62,9 +62,7 @@ Will perform a launch of the test suite; generating a fully 100% covered report.
 
 ## NOTE1:
 
-As this is a Vite app, I installed Jest unit-tests using:
-
-https://dev.to/hannahadora/jest-testing-with-vite-and-react-typescript-4bap
+I installed start writing Jest unit-tests for this - however the live API has a CORS blocker on it resulting in "Error: Cross origin http://localhost forbidden"... to get over this when hosting I have a switch on live to pull data from local JSON mocks
 
 ## NOTE2:
 
